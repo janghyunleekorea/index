@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple House</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7fa;
+        }
+        .house {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: #ffcc80;
+            border: 5px solid #8d6e63;
+        }
+        .roof {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 110px solid transparent;
+            border-right: 110px solid transparent;
+            border-bottom: 100px solid #d32f2f;
+        }
+        .door {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 80px;
+            background: #795548;
+            border: 3px solid #5d4037;
+        }
+        .window {
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background: #90caf9;
+            border: 3px solid #1565c0;
+        }
+        .window.right {
+            left: auto;
+            right: 20px;
+        }
+        .text {
+            font-size: 100pt;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">안녕하십니까</div>
+    <div class="house">
+        <div class="roof"></div>
+        <div class="window"></div>
+        <div class="window right"></div>
+        <div class="door"></div>
+    </div>
+</body>
+</html>
