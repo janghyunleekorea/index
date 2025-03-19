@@ -1,72 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple House</title>
+    <title>군대에서 와인 만들었던 이야기</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #e0f7fa;
-        }
-        .house {
+            background: url('https://source.unsplash.com/1600x900/?military') no-repeat center center fixed;
+            background-size: cover;
             position: relative;
-            width: 200px;
-            height: 200px;
-            background: #ffcc80;
-            border: 5px solid #8d6e63;
+            color: #fff;
+            text-align: center;
+            padding-bottom: 50px;
         }
-        .roof {
+        
+        body::before {
+            content: "";
             position: absolute;
-            top: -100px;
+            top: 0;
             left: 0;
-            width: 0;
-            height: 0;
-            border-left: 110px solid transparent;
-            border-right: 110px solid transparent;
-            border-bottom: 100px solid #d32f2f;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
         }
-        .door {
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 80px;
-            background: #795548;
-            border: 3px solid #5d4037;
-        }
-        .window {
-            position: absolute;
-            top: 50px;
-            left: 20px;
-            width: 50px;
-            height: 50px;
-            background: #90caf9;
-            border: 3px solid #1565c0;
-        }
-        .window.right {
-            left: auto;
-            right: 20px;
-        }
-        .text {
-            font-size: 100pt;
+
+        header {
+            padding: 30px;
+            font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
+            background: linear-gradient(135deg, #7b1fa2, #d81b60);
+            color: white;
+            text-shadow: 2px 2px 5px black;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 50px auto;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            display: block;
+        }
+
+        .story {
+            font-size: 18px;
+            line-height: 2.5;
+            text-align: center;
+            padding: 40px 20px;
+            font-family: '궁서', serif;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
-    <div class="text">안녕하십니까</div>
-    <div class="house">
-        <div class="roof"></div>
-        <div class="window"></div>
-        <div class="window right"></div>
-        <div class="door"></div>
+
+    <header>🚨 군대에서 와인 만들었던 이야기 🚨</header>
+
+    <div class="container">
+        <h2>따라하지 마세요 </h2>
+
+        <p class="story">
+            심심한 일병 시절 인스타를 보다가 집에서 와인 만드는 방법에 대해 알게되었다.
+        </p>
+
+        <p class="story">
+            편하게 군대에서 시간을 보내며 하루하루가 지루해 죽을 지경이였던 나는 맞선임에게 바로 보여주었고 우린 바로 실행에 옮겼다.
+        </p>
+
+           <img src="1.jpg" alt="카톡">
+
+        <p class="story">
+            물론 일병 때라 아무도 모르게 둘이서 마시기로 했다.
+        </p>
+
+        <p class="story">
+            보일러가 뜨겁게 돌아가는 겨울날 방 바닥에 포도쥬스 병에 효모와 설탕을 넣고 2-3주간 기다리면 맛있는 와인이 만들어진다는 것이였다.
+        </p>
+
+        <img src="https://source.unsplash.com/500x300/?grape,juice" alt="포도 주스">
+
+        <p class="story">
+            나는 바로 쿠팡으로 효모와 유리병을 주문햇고
+        </p>
+
+        <p class="story">
+            맞선임은 BX에서 포도쥬스와 설탕을 샀다.
+        </p>
+
+        <h3>💥 "펑!!!" 💥</h3>
+
+        <p class="story">
+            저녁시간에 맞선임 침대 밑에서 뻥 소리가 났다.
+        </p>
+
+        <p class="story">
+            수고스럽게 만들었던 와인 병이 터진 것이었다.
+        </p>
+
+        <img src="https://source.unsplash.com/500x300/?explosion" alt="폭발 이미지">
+
+        <p class="story">
+            원래는 발효 중 가스를 빼야하기 때문에 조금 구멍을 내줘야하는데 그것도 까먹고 효모도 한꼬집만 넣어야 하는데 생각없이 털어넣은것이 문제였다.
+        </p>
+
+        <p class="story">
+            맞선임 침대 밑에 있엇던 터라 맞선임 다리에 유리가 튀었고 생활관에는 어디 사건 현장처럼 피 튀기듯 와인이 온갖곳에 튀어있었다. 사실 그 중에 진짜 피도 있었을 것이다.
+        </p>
+
+        <p class="story">
+            1층 전체에 와인 냄새가 진동을 하기 했다. 선임들이 와서 뭔일이냐고 물어보는데 웃기기도 하고 당황스러워서 바로 답하기가 참 힘들었다.
+        </p>
+
+        <p class="story">
+            (와인만들다가 유리병 박살났다고 솔직하게 말했는데 성격들이 비슷해서 그런지 웃고 끝났다)
+        </p>
+
+        <p class="story">
+            맞선임 발에는 와인이 아닌 진짜 피가 흐르고 있었음에도 부대 내에 있는 병원을 가지 못했다. 도저히 당직사관에게 이 유리의 정체를 말할 수 없어서 그랫다.
+        </p>
+
+        <p class="story">
+            당직사관이 저녁날 복도에서 나는 냄새가 대체 뭐냐고 물어보긴 했다는데 디퓨저라고 둘러대니 그냥 넘어갔다는 후일담을 들었다.
+        </p>
+
+        <p class="story">
+            결국 다음날 맞선임은 유리를 빼러 병원에 갔고 아직 그 상처가 남아있다.
+        </p>
     </div>
+
+    <div class="footer">
+        2025 Web Publishing © 이장현 모든 권리 보유 🥂
+    </div>
+
 </body>
 </html>
